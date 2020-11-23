@@ -226,11 +226,11 @@ body {
    position: absolute;
    width: 35px;
    height: 35px;
-   margin-left: -16px;
    border-radius: 50%;
    background-color: #ffb233;
    bottom: 10%;
    left: 50%;
+   transform: translate(-50%);
 
 }
 
@@ -302,6 +302,7 @@ body {
 .social__item {
    cursor: pointer;
 }
+
 /*           SKILLS START */
 
 .skills {
@@ -320,16 +321,20 @@ body {
    text-transform: uppercase;
    letter-spacing: 3px;
 }
+
 .skills__list {
    display: flex;
    flex-direction: column;
    align-items: center;
 }
+
 .skills__item {
-   
    list-style: none;
+   display: grid;
+   place-items: center;
 
 }
+
 .skills__link {
    display: grid;
    place-items: center;
@@ -338,23 +343,81 @@ body {
    background-color: #ffb233;
    border-radius: 50%;
    margin-bottom: 20px;
-    transition: all 0.3s ease 0s;
+   transition: all 0.3s ease 0s;
 }
 
 .skills__link:hover {
-   background-color: #abc100;
-   box-shadow: 0px 0px 4px 5px #abb000;
-   
+   background-color: #30ad29;
+   box-shadow: 0px 0px 4px 5px #1e801a;
+
 }
 
 .skills__link:active {
    background-color: #abc990;
+
+}
+
+.skills__active {
+   box-shadow: 0px 0px 4px 5px #806538;
+}
+
+.skills__description {
+   margin-bottom: 20px;
+}
+
+
+
+/* STATS START */
+
+.stats {
+   padding-top: 20px;
+   padding-bottom: 50px;
+   background-color: #f3f4ff;
+   color: black;
+}
+
+hr{
+   background-color: #dfdcdc;
+   height: 1px;
+}
+
+.stats__list {
+   padding-top: 20px;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+    grid-gap: 50px;
+   list-style: none;
   
 }
 
-.skills__active{
-   box-shadow: 0px 0px 4px 5px #816538;
+.stats__item {
+   display: grid;
+   place-items: center;
+
 }
-.skills__description{
-   margin-bottom: 20px;
+
+.stats__number {
+   position: relative;
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+   font-size: 21px;
+   font-weight: 700;
+}
+
+.stats__number:before {
+   position: absolute;
+   content: "";
+   width: 50%;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   border-bottom: 2px solid #51a351;
+
+
+}
+
+.stats__description {
+   font-size: 16px;
+   font-style: italic;
 }
