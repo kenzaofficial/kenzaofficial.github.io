@@ -16,6 +16,12 @@
    src: local("OpenSans-SemiBold"), url(/OpenSans-SemiBold.ttf)
 }
 
+:root {
+   --main-font: "OpenSans", sans-serif;
+   --main-color: white;
+   --background-yellow: #ffb233;
+}
+
 * {
    margin: 0;
    padding: 0;
@@ -24,24 +30,19 @@
 }
 
 body {
-   font-family: "OpenSans", sans-serif;
-   color: white;
+   font-family: var(--main-font);
+   color: var(--main-color);
 }
 
 .button {
    display: inline-block;
    padding: 17px 20px;
-   max-width: 225px;
-   width: 100%;
-   text-transform: uppercase;
+   min-width: 225px;
    font-size: 14px;
+   font-weight: 600;
+   text-transform: uppercase;
    border: 1px solid #51a351;
    border-radius: 5px;
-   font-weight: 600;
-}
-
-.description__button {
-   color: #51a351;
    cursor: pointer;
 }
 
@@ -65,18 +66,16 @@ body {
    width: 100%;
    top: 0;
    left: 0;
-   z-index: 50;
+   z-index: 10;
 }
 
 .header__logo:hover {
    color: indianred;
-
-
 }
 
 .header::before {
-   content: "";
    position: absolute;
+   content: "";
    top: 0;
    left: 0;
    width: 100%;
@@ -87,14 +86,13 @@ body {
 
 
 .header__logo {
-   font-size: 30px;
-   text-decoration: none;
-   color: white;
    position: relative;
-   z-index: 5;
-   font-family: "OpenSans", sans-serif;
+   font-size: 30px;
+   font-family: var(--main-font);
+   color: var(--main-color);
+   text-decoration: none;
    transition: all 0.5s ease 0s;
-
+   z-index: 5;
 }
 
 .header__body {
@@ -106,8 +104,8 @@ body {
 }
 
 .header__list {
-   padding-top: 10px;
    display: block;
+   padding-top: 10px;
    text-align: center;
    text-transform: uppercase;
 }
@@ -118,7 +116,7 @@ body {
 }
 
 .header__link {
-   color: white;
+   color: var(--main-color);
    text-decoration: none;
    font-size: 23px;
 }
@@ -128,8 +126,8 @@ body {
 }
 
 .header__burger {
-   display: block;
    position: relative;
+   display: block;
    width: 30px;
    height: 20px;
    z-index: 3;
@@ -201,18 +199,18 @@ body {
 
 .content__text {
    font-size: 21px;
-   color: white;
+   color: var(--main-color);
 }
 
 
 .hero__title {
+   padding-top: 100px;
+   margin-bottom: 20px;
    text-align: center;
+   font-size: 40px;
    font-weight: 700;
    text-transform: uppercase;
-   padding-top: 100px;
-   font-size: 40px;
    letter-spacing: 3px;
-   margin-bottom: 20px;
 }
 
 .hero__subtitle {
@@ -221,16 +219,16 @@ body {
    letter-spacing: 1.9px;
 }
 
-
 .button__down {
    position: absolute;
    width: 35px;
    height: 35px;
    border-radius: 50%;
-   background-color: #ffb233;
+   background-color: var(--background-yellow);
    bottom: 10%;
    left: 50%;
    transform: translate(-50%);
+   cursor: pointer;
 
 }
 
@@ -263,16 +261,16 @@ body {
    padding-top: 50px;
    padding-bottom: 40px;
    text-align: center;
-   color: black;
    font-size: 21px;
+   color: black;
 
 }
 
 .description__title {
    margin-bottom: 20px;
+   font-weight: 300;
    letter-spacing: 3px;
    text-transform: uppercase;
-   font-weight: 300;
 }
 
 .description__image {
@@ -282,8 +280,8 @@ body {
 
 .description__subtitle {
    margin-bottom: 15px;
-   color: #818181;
    font-weight: 300;
+   color: #818181;
 }
 
 .description__text {
@@ -299,8 +297,24 @@ body {
    min-width: 300px;
 }
 
-.social__item {
+.social__link {
    cursor: pointer;
+}
+
+.description__button {
+   color: #51a351;
+   transition: all 0.3s ease 0s;
+}
+
+.description__button:hover {
+   color: var(--main-color);
+   background-color: #51a351;
+   box-shadow: 0 0 10px 0px #4b4d4f;
+}
+
+.description__button:active {
+   background-color: #11a100;
+   box-shadow: 0 0 20px 1px #51a351;
 }
 
 /*           SKILLS START */
@@ -308,10 +322,11 @@ body {
 .skills {
    padding-top: 40px;
    padding-bottom: 50px;
+   text-align: center;
    background-image: url(/img/image.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-   text-align: center;
+
 }
 
 .skills__title {
@@ -340,7 +355,7 @@ body {
    place-items: center;
    width: 100px;
    height: 100px;
-   background-color: #ffb233;
+   background-color: var(--background-yellow);
    border-radius: 50%;
    margin-bottom: 20px;
    transition: all 0.3s ease 0s;
@@ -362,7 +377,7 @@ body {
 }
 
 .skills__description {
-   margin-bottom: 20px;
+   margin-bottom: 10px;
 }
 
 
@@ -372,11 +387,12 @@ body {
 .stats {
    padding-top: 20px;
    padding-bottom: 50px;
-   background-color: #f3f4ff;
    color: black;
+   background-color: #f3f4ff;
+
 }
 
-hr{
+.stats hr {
    background-color: #dfdcdc;
    height: 1px;
 }
@@ -386,15 +402,13 @@ hr{
    display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr;
-    grid-gap: 50px;
+   grid-gap: 50px;
    list-style: none;
-  
 }
 
 .stats__item {
    display: grid;
    place-items: center;
-
 }
 
 .stats__number {
@@ -413,11 +427,91 @@ hr{
    left: 50%;
    transform: translateX(-50%);
    border-bottom: 2px solid #51a351;
-
-
 }
 
 .stats__description {
    font-size: 16px;
    font-style: italic;
+   text-align: center;
+}
+
+/* Gallery start */
+
+
+.gallery {
+   padding-top: 40px;
+   padding-bottom: 30px;
+   text-align: center;
+   color: black;
+}
+
+.gallery__title {
+   margin-bottom: 20px;
+   font-size: 21px;
+   font-weight: 300;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+}
+
+.gallery__list {
+   display:grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   grid-gap: 50px;
+   margin-bottom: 40px;
+}
+.gallery__item {
+   list-style: none;
+}
+.gallery__link {
+   position: relative;
+   padding-bottom: 10px;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.gallery__link:active {
+   color: indianred; 
+}
+
+.gallery__link::before{
+   position: absolute;
+   content: "";
+   width: 50%;
+   left: 50%;
+   bottom: 0;
+   border-bottom: 1px solid red;
+   transform: translate(-50%);
+}
+
+/* gallery__content start */
+
+.gallery__content {
+   display: grid;
+   place-items: center;
+   grid-template-columns: repeat(auto-fill, minmax(270px,1fr));
+   grid-gap:10px;
+   margin-bottom: 20px;
+}
+
+/*.gallery__item{}
+  .gallery__image{}*/
+.gallery__button {
+   background-color: #51a351;
+   color: #fff;
+   font-weight:600;
+   box-shadow: 0 0 20px #51a351;
+   transition: all 0.3s ease 0s;
+}
+
+.gallery__button:hover {
+   background-color: #fff;
+   color: #51a351;
+   box-shadow: none;
+}
+
+.gallery__button:active {
+   color: white;
+   background-color: #11a100;
+   box-shadow: 0 0 20px 1px #51a351;
 }
