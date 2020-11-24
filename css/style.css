@@ -84,7 +84,6 @@ body {
    z-index: 3;
 }
 
-
 .header__logo {
    position: relative;
    font-size: 30px;
@@ -201,7 +200,6 @@ body {
    font-size: 21px;
    color: var(--main-color);
 }
-
 
 .hero__title {
    padding-top: 100px;
@@ -380,8 +378,6 @@ body {
    margin-bottom: 10px;
 }
 
-
-
 /* STATS START */
 
 .stats {
@@ -454,15 +450,17 @@ body {
 }
 
 .gallery__list {
-   display:grid;
+   display: grid;
    grid-template-columns: 1fr 1fr;
    grid-template-rows: 1fr 1fr;
    grid-gap: 50px;
    margin-bottom: 40px;
 }
+
 .gallery__item {
    list-style: none;
 }
+
 .gallery__link {
    position: relative;
    padding-bottom: 10px;
@@ -471,10 +469,10 @@ body {
 }
 
 .gallery__link:active {
-   color: indianred; 
+   color: indianred;
 }
 
-.gallery__link::before{
+.gallery__link::before {
    position: absolute;
    content: "";
    width: 50%;
@@ -489,8 +487,8 @@ body {
 .gallery__content {
    display: grid;
    place-items: center;
-   grid-template-columns: repeat(auto-fill, minmax(270px,1fr));
-   grid-gap:10px;
+   grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+   grid-gap: 10px;
    margin-bottom: 20px;
 }
 
@@ -499,7 +497,7 @@ body {
 .gallery__button {
    background-color: #51a351;
    color: #fff;
-   font-weight:600;
+   font-weight: 600;
    box-shadow: 0 0 20px #51a351;
    transition: all 0.3s ease 0s;
 }
@@ -514,4 +512,77 @@ body {
    color: white;
    background-color: #11a100;
    box-shadow: 0 0 20px 1px #51a351;
+}
+
+/* review start */
+
+.review {
+   padding-top: 40px;
+   text-align: center;
+   color: black;
+   background: #f3f4ff url(/img/BG\ .png) no-repeat;
+   background-size: contain;
+}
+
+.review__title {
+   margin-bottom: 20px;
+   font-size: 21px;
+   font-weight: 300;
+   text-transform: uppercase;
+   letter-spacing: 3px;
+}
+
+.review__text {
+   margin-bottom: 20px;
+}
+
+.review__slider {
+   display: grid;
+   place-items: center;
+   grid-template: 1fr / 1fr;
+   margin-bottom: 10px;
+}
+
+.review__item {
+   display: none;
+}
+
+.review__active {
+   display: grid;
+   place-items: center;
+   position: relative;
+}
+
+.review__active::before {
+   position: absolute;
+   content: "";
+   bottom: -13px;
+   left: 50%;
+   transform: translate(-50%);
+   width: 100%;
+   border-bottom: 3px solid var(--background-yellow);
+}
+
+.review__image {
+   margin-bottom: 30px;
+}
+
+.review__author {
+   margin-bottom: 5px;
+   font-size: 14px;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+
+.review__author-description {
+   font-size: 12px;
+   color: #899295;
+}
+
+/* review__image{}*/
+
+.review hr {
+   background-color: #c4c4cf;
+   background-color: red;
+   height: 3px;
 }
