@@ -56,7 +56,7 @@ a {
 
 .hero {
    position: relative;
-   background-image: url(/img/apple-desk-designer-display.jpg);
+   background-image: url(../img/apple-desk-designer-display.jpg);
    background-repeat: no-repeat;
    background-size: cover;
    height: 150vmin;
@@ -329,7 +329,7 @@ a {
    padding-top: 40px;
    padding-bottom: 50px;
    text-align: center;
-   background-image: url(/img/image.jpg);
+   background-image: url(../img/image.jpg);
    background-repeat: no-repeat;
    background-size: cover;
 
@@ -528,7 +528,7 @@ a {
    padding-bottom: 20px;
    text-align: center;
    color: var(--color-black);
-   background: #f3f4ff url(/img/BG\ .png) no-repeat;
+   background: #f3f4ff url(../img/BG\ .png) no-repeat;
    background-size: contain;
 }
 
@@ -596,7 +596,7 @@ a {
 .footer {
    padding-top: 20px;
    padding-bottom: 10px;
-   background: url(/img/footer.jpg) no-repeat;
+   background: url(../img/footer.jpg) no-repeat;
    background-size: cover;
    text-align: center;
 }
