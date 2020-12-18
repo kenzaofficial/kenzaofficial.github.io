@@ -4,3 +4,17 @@ $(document).ready(function() {
 
    });
 });
+
+
+
+
+jQuery(document).ready(function($) {
+$('button').on('click', function() {
+  if ( $(this).hasClass('button__down') ) {
+    var movePos = $(window).scrollTop() + $(window).height();
+  }
+  
+  $('html, body').animate({
+    scrollTop: movePos}, 600);
+});
+});

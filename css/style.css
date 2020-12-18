@@ -13,7 +13,7 @@
 @font-face {
    font-family: "OpenSans";
    font-weight: 600;
-   src: local("OpenSans-SemiBold"), url(../OpenSans-SemiBold.ttf)
+   src: local("OpenSans-SemiBold"), url(../fonts/OpenSans-SemiBold.ttf)
 }
 
 :root {
@@ -208,7 +208,7 @@ a {
    background-image: url(../img/apple-desk-designer-display.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-   height: 190vmin;
+   height: 100vh;
 }
 
 .hero__title {
