@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 @font-face {
   font-family: 'OpenSans';
   font-weight: 700;
@@ -69,6 +71,25 @@ a {
   z-index: 10;
 }
 
+.header__logo {
+  position: relative;
+  font-size: 20px;
+  font-family: Oswald;
+  color: var(--color-white);
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.5s ease 0s;
+  z-index: 5;
+}
+
+.header__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
 .header__logo:hover {
   color: indianred;
 }
@@ -82,24 +103,6 @@ a {
   height: 100%;
   background-color: var(--color-gray);
   z-index: 3;
-}
-
-.header__logo {
-  position: relative;
-  font-size: 30px;
-  font-family: var(--main-font);
-  color: var(--color-white);
-  text-decoration: none;
-  transition: all 0.5s ease 0s;
-  z-index: 5;
-}
-
-.header__body {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px;
 }
 
 .header__list {
@@ -193,8 +196,7 @@ a {
 .header__menu.active {
   top: 0;
 }
-
-.content {
+hero .content {
   padding-top: 50px;
 }
 
@@ -209,6 +211,7 @@ a {
   position: relative;
   background-image: url(../img/apple-desk-designer-display.jpg);
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   height: 100vh;
 }
@@ -378,6 +381,10 @@ a {
 
 .skills__link:active {
   background-color: #abc990;
+}
+
+.skills__link img {
+  width: 50%;
 }
 
 .skills__active {
