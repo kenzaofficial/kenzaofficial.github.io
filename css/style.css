@@ -397,8 +397,7 @@ a {
   align-items: center;
   justify-content: center;
   column-gap: 20px;
-  }
-
+}
 
 .skills__item {
   margin-bottom: 10px;
@@ -426,11 +425,6 @@ a {
   background-color: #abc990;
 }
 
-  width: 50%;
-}
-
-/* workspace START */
-
 .workspace {
   position: relative;
   padding-top: 20px;
@@ -439,7 +433,7 @@ a {
   background-color: #f3f4ff;
 }
 
-.workspace__title{
+.workspace__title {
   margin-bottom: 20px;
 }
 
