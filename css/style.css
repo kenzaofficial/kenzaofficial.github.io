@@ -73,7 +73,6 @@ a {
 
 .header__logo {
   position: relative;
-  font-size: 20px;
   color: #f8fc86;
   text-decoration: none;
   letter-spacing: 1px;
@@ -398,14 +397,8 @@ a {
   align-items: center;
   justify-content: center;
   column-gap: 20px;
-  row-gap: 10px;
-}
-@media (min-width: 767px) {
-  .skills__list {
-    column-gap: 40px;
-    row-gap: 20px;
   }
-}
+
 
 .skills__item {
   margin-bottom: 10px;
@@ -433,7 +426,6 @@ a {
   background-color: #abc990;
 }
 
-.skills__link svg {
   width: 50%;
 }
 
@@ -447,16 +439,12 @@ a {
   background-color: #f3f4ff;
 }
 
-.workspace hr {
-  background-color: #dfdcdc;
-  height: 1px;
+.workspace__title{
+  margin-bottom: 20px;
 }
 
 .workspace__list {
 }
-
-/* portfolio start */
-
 .portfolio {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -605,6 +593,11 @@ a {
 
 .footer__copyright {
   font-size: 14px;
+}
+
+svg {
+  width: 70px;
+  height: 70px;
 }
 
 svg {
