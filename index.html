@@ -15,7 +15,7 @@
          <div class="container">
             <div class="header__body">
                <a class="header__logo">
-                  kenzaofficial
+                  kenzaofficial.github.io
                </a>
                <div class="header__burger">
                   <span></span>
@@ -23,16 +23,16 @@
                <nav class="header__menu">
                   <ul class="header__list">
                      <li>
-                        <a href="#" class="header__link">Home</a>
+                        <a href="#aboutme" class="header__link">About me</a>
                      </li>
                      <li>
-                        <a href="#" class="header__link">About me</a>
+                        <a href="#skills" class="header__link">Skills</a>
                      </li>
                      <li>
-                        <a href="#" class="header__link">Portfolio</a>
+                        <a href="#portfolio" class="header__link">Portfolio</a>
                      </li>
                      <li>
-                        <a href="#" class="header__link">Contacts</a>
+                        <a href="#workspace" class="header__link">Workspace</a>
                      </li>
                   </ul>
                </nav>
@@ -43,10 +43,10 @@
       <p class="hero__subtitle">Web Developer</p>
       <button type="button" class="button__down"></button>
    </section>
-   <section class="description">
+   <section class="description" id="aboutme">
       <div class="container">
          <h4 class="description__title title">About me</h4>
-         <div class="description__image"><img src="/img/foto_1.jpg">
+         <div class="description__image"><img src="img/foto_1.jpg">
          </div>
          <h6 class="description__subtitle">I am 29 years old</h6>
          <p class="description__text">Hello,My name is Yuriy i am web-developer.I live in Ukraine.
@@ -85,63 +85,85 @@
          <a class="button description__button">Download my CV</a>
       </div>
    </section>
-   <section class="skills">
+   <section class="skills" id="skills">
       <div class="container">
-         <h3 class="skills__title title">What I suggest</h3>
+         <h3 class="skills__title title">My skills</h3>
          <ul class="skills__list">
-            <li class="skills__item"><a href="#" class="skills__link skills__active">
+            <li class="skills__item">
+               <div class="skills__img">
                   <svg alt="html-icon">
                      <use href="img/sprite.svg#html-icon"></use>
                   </svg>
-               </a>
+               </div>
                <p class="skills__description">HTML 5</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link skills__active">
+            <li class="skills__item">
+               <div class="skills__img">
                   <svg alt="css-icon">
                      <use href="img/sprite.svg#css-icon"></use>
                   </svg>
-               </a>
+               </div>
                <p class="skills__description">CSS 3</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link skills__active">
+            <li class="skills__item">
+               <div class="skills__img">
                   <svg alt="js-icon">
                      <use href="img/sprite.svg#js-icon"></use>
                   </svg>
-               </a>
+               </div>
                <p class="skills__description">Javascript</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link skills__active">
+            <li class="skills__item">
+               <div class="skills__img">
                   <svg alt="sass-icon">
                      <use href="img/sprite.svg#sass-icon"></use>
                   </svg>
-               </a>
+               </div>
                <p class="skills__description">Sass</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link skills__active">
+            <li class="skills__item">
+               <div class="skills__img">
                   <svg alt="figma-icon">
                      <use href="img/sprite.svg#figma-icon"></use>
                   </svg>
-               </a>
+               </div>
                <p class="skills__description">Figma</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link skills__active">
+            <li class="skills__item">
+               <div class="skills__img">
                   <svg alt="github-icon">
                      <use href="img/sprite.svg#github-icon"></use>
                   </svg>
-               </a>
+               </div>
                <p class="skills__description">Github</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link skills__active">
+            <li class="skills__item">
+               <div class="skills__img">
                   <svg alt="github-icon">
                      <use href="img/sprite.svg#git-icon"></use>
                   </svg>
-               </a>
+               </div>
                <p class="skills__description">Git</p>
             </li>
          </ul>
       </div>
    </section>
-   <section class="workspace">
+   <section class="portfolio" id="portfolio">
+      <div class="container">
+         <h3 class="portfolio__title title">Portfolio</h3>
+         <ul class="portfolio__list">
+            <li class="portfolio__item">
+               <a href="https://kenzaofficial.github.io/home-healty-food/#" target="_blank" class="portfolio__link">
+                  <img src="img/food.png" alt="healtyfood">
+               </a>
+            </li>
+            <li class="portfolio__item">
+               <a href="" class="portfolio__link"></a>
+            </li>
+         </ul>
+      </div>
+   </section>
+   <section class="workspace" id="workspace">
       <div class="container">
          <h4 class="workspace__title title">
             My workspace
@@ -157,21 +179,7 @@
             <li class="workspace__item">headset: steelseries arctics 5.</li>
          </ul>
    </section>
-   <section class="portfolio">
-      <div class="container">
-         <h3 class="portfolio__title title">Portfolio</h3>
-         <ul class="portfolio__list">
-            <li class="portfolio__item">
-               <a href="https://kenzaofficial.github.io/home-healty-food/#" target="_blank" class="portfolio__link">
-                  <img src="img/food.png" alt="healtyfood">
-               </a>
-            </li>
-            <li class="portfolio__item">
-               <a href="" class="portfolio__link"></a>
-            </li>
-         </ul>
-      </div>
-   </section>
+
    <footer class="footer">
       <div class="container">
          <span class="footer__copyright">COPYRIGHT © 2017-2023 Yuriy Stetskyy</span>

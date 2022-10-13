@@ -8,6 +8,10 @@
   --color-gray: #4b4d4f;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -32,7 +36,7 @@ a {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
-  border: 1px solid var(--color-green);
+  border: 1px solid #191919;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -46,7 +50,7 @@ a {
 }
 
 .container {
-  min-width: 320px;
+  max-width: 1240px;
   width: 100%;
   margin: 0 auto;
   padding: 0 10px;
@@ -63,8 +67,7 @@ a {
 .header__logo {
   position: relative;
   font-size: 20px;
-
-  color: var(--color-white);
+  color: #f8fc86;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.5s ease 0s;
@@ -106,6 +109,13 @@ a {
   margin-bottom: 20px;
 }
 
+.header__list li:hover {
+  background-color: #f8fc86;
+}
+.header__list li:hover .header__link {
+  color: black;
+}
+
 .header__link {
   color: var(--color-white);
   text-decoration: none;
@@ -130,7 +140,7 @@ a {
 .header__burger:before,
 .header__burger:after {
   content: '';
-  background-color: var(--color-white);
+  background-color: #f8fc86;
   position: absolute;
   width: 100%;
   height: 2px;
@@ -148,7 +158,7 @@ a {
 
 .header__burger span {
   position: absolute;
-  background-color: var(--color-white);
+  background-color: #f8fc86;
   left: 0;
   width: 100%;
   height: 2px;
@@ -178,7 +188,7 @@ a {
   width: 100%;
   height: auto;
   padding-top: 50px;
-  background-color: darkslategray;
+  background-color: #191919;
   transition: all 0.3s ease 0s;
 }
 
@@ -222,7 +232,7 @@ hero .content {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: var(--color-yellow);
+  background-color: #f8fc86;
   bottom: 10%;
   left: 50%;
   transform: translate(-50%);
@@ -239,7 +249,7 @@ hero .content {
   position: absolute;
   width: 8px;
   height: 2px;
-  background-color: white;
+  background-color: #000;
 }
 
 .button__down:before {
@@ -307,19 +317,19 @@ hero .content {
 }
 
 .description__button {
-  color: #51a351;
+  color: #191919;
   transition: all 0.3s ease 0s;
 }
 
 .description__button:hover {
-  color: var(--main-color);
-  background-color: #51a351;
+  color: #fff;
+  background-color: #191919;
   box-shadow: 0 0 10px 0px #4b4d4f;
 }
 
 .description__button:active {
-  background-color: #11a100;
-  box-shadow: 0 0 15px 1px #51a351;
+  background-color: #4b4d4f;
+  box-shadow: 0 0 15px 1px #191919;
 }
 
 /*           SKILLS START */
@@ -347,49 +357,37 @@ hero .content {
   align-items: center;
   justify-content: center;
   column-gap: 20px;
+  row-gap: 10px;
 }
 @media (min-width: 767px) {
   .skills__list {
-    column-gap: 60px;
+    column-gap: 40px;
+    row-gap: 20px;
   }
 }
 
 .skills__item {
-  list-style: none;
+  margin-bottom: 10px;
   display: grid;
   place-items: center;
+  list-style: none;
+  margin-bottom: 10px;
 }
 
-.skills__link {
-  display: grid;
-  place-items: center;
-  width: 100px;
-  height: 100px;
+.skills__img {
   background-color: #f8fc86;
   border-radius: 50%;
-  margin-bottom: 10px;
-  transition: all 0.3s ease 0s;
-}
-
-.skills__link:hover {
-  background-color: #30ad29;
-  box-shadow: 0px 0px 4px 5px #1e801a;
-}
-
-.skills__link:active {
-  background-color: #abc990;
+  width: 100px;
+  height: 100px;
+  display: grid;
+  place-items: center;
 }
 
 .skills__link svg {
   width: 50%;
 }
 
-.skills__active {
-  box-shadow: 0px 0px 4px 5px #806538;
-}
-
 .skills__description {
-  margin-bottom: 30px;
 }
 
 /* workspace START */
@@ -559,7 +557,7 @@ hero .content {
 }
 
 .footer__copyright {
-  font-size: 10px;
+  font-size: 14px;
 }
 
 svg {
