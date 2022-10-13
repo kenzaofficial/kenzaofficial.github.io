@@ -66,8 +66,6 @@ a {
 
 .header__logo {
   position: relative;
-  font-size: 20px;
-  color: #f8fc86;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.5s ease 0s;
@@ -357,12 +355,6 @@ hero .content {
   align-items: center;
   justify-content: center;
   column-gap: 20px;
-  row-gap: 10px;
-}
-@media (min-width: 767px) {
-  .skills__list {
-    column-gap: 40px;
-    row-gap: 20px;
   }
 }
 
@@ -392,11 +384,11 @@ hero .content {
   background-color: #abc990;
 }
 
-.skills__link svg {
   width: 50%;
 }
 
 .skills__description {
+
 }
 
 /* workspace START */
@@ -416,9 +408,6 @@ hero .content {
 
 .workspace__list {
 }
-
-/* portfolio start */
-
 .portfolio {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -567,6 +556,11 @@ hero .content {
 
 .footer__copyright {
   font-size: 14px;
+}
+
+svg {
+  width: 70px;
+  height: 70px;
 }
 
 svg {
