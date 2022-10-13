@@ -39,14 +39,13 @@
             </div>
          </div>
       </header>
-      <h2 class="hero__title">Hi!<br>I am Yuriy Stetskyy</h2>
+      <h2 class="hero__title title">Hi!<br>I am Yuriy Stetskyy</h2>
       <p class="hero__subtitle">Web Developer</p>
       <button type="button" class="button__down"></button>
    </section>
    <section class="description">
       <div class="container">
-         <h4 class="description__title">About me</h4>
-         <div class="description__image"><img src="/img/foto_1.jpg">
+         <div class="description__image"><img src="img/foto_1.jpg">
          </div>
          <h6 class="description__subtitle">I am 29 years old</h6>
          <p class="description__text">Hello,My name is Yuriy i am web-developer.I live in Ukraine.
@@ -67,13 +66,14 @@
 
          <div class="social">
             <a href="https://t.me/kenzzaa" target="_blank" class="social__link">
-               <img src="/img/fb.png">
-            </a>
-            <a href="#" class="social__link social__active">
-               <img src="/img/Twitter.png">
+
             </a>
             <a href="https://www.linkedin.com/in/yuriy-stetskyy-0202a1243/" target="_blank" class="social__link">
-               <img src="/img/Linkedin.png">
+               <svg alt="linkedin-icon">
+                  <use href="img/sprite.svg#linkedin-icon"></use>
+               </svg>
+            </a>
+
             </a>
          </div>
          <a class="button description__button">Download my CV</a>
@@ -81,130 +81,67 @@
    </section>
    <section class="skills">
       <div class="container">
-         <h3 class="skills__title">What I suggest</h3>
+         <h3 class="skills__title title">What I suggest</h3>
          <ul class="skills__list">
-            <li class="skills__item"><a href="#" class="skills__link skills__active"><svg
-                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px" height="48px">
-                     <path d="M41,5H7l3,34l14,4l14-4L41,5L41,5z" />
-                     <path d="M24 8L24 39.9 35.2 36.7 37.7 8z" />
-                     <path fill="#FFF"
-                        d="M24,25v-4h8.6l-0.7,11.5L24,35.1v-4.2l4.1-1.4l0.3-4.5H24z M32.9,17l0.3-4H24v4H32.9z" />
-                     <path fill="#EEE"
-                        d="M24,30.9v4.2l-7.9-2.6L15.7,27h4l0.2,2.5L24,30.9z M19.1,17H24v-4h-9.1l0.7,12H24v-4h-4.6L19.1,17z" />
-                  </svg></a>
-               <p class="skills__description">HTML5</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link"><img src="/img/graphic.png"></a>
-               <p class="skills__description">Graphic design</p>
+            <li class="skills__item"><a href="#" class="skills__link skills__active">
+                  <svg alt="figma-icon">
+                     <use href="img/sprite.svg#figma-icon"></use>
+                  </svg>
+               </a>
+               <p class="skills__description">Figma</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link"><img src="/img/branding.png"></a>
-               <p class="skills__description">Branding</p>
+            <li class="skills__item"><a href="#" class="skills__link skills__active">
+                  <svg alt="github-icon">
+                     <use href="img/sprite.svg#github-icon"></use>
+                  </svg>
+               </a>
+               <p class="skills__description">Github</p>
             </li>
-            <li class="skills__item"><a href="#" class="skills__link"><img src="/img/typography.png"></a>
-               <p class="skills__description">Typography</p>
+            <li class="skills__item"><a href="#" class="skills__link skills__active">
+                  <svg alt="github-icon">
+                     <use href="img/sprite.svg#git-icon"></use>
+                  </svg>
+               </a>
+               <p class="skills__description">Git</p>
             </li>
          </ul>
       </div>
    </section>
-   <section class="stats">
+   <section class="workspace">
       <div class="container">
-         <ul class="stats__list">
-            <li class="stats__item"><span class="stats__number">9999</span><span class="stats__description">Projects
-                  Finished</span></li>
-            <li class="stats__item"><span class="stats__number">99</span><span class="stats__description">Creeps
-                  denied</span></li>
-            <li class="stats__item"><span class="stats__number">9</span><span class="stats__description">Rampages
-                  made</span></li>
-            <li class="stats__item"><span class="stats__number">999999</span><span class="stats__description">Camps
-                  stacked</span></li>
+         <h4 class="workspace__title title">
+            My workspace
+         </h4>
+         <ul class="workspace__list">
+            <li class="workspace__item">Monitors: Philips 24, Samsung 24</li>
+            <li class="workspace__item">RAM: 16gb</li>
+            <li class="workspace__item">processor: Ryzen 5 1600X</li>
+            <li class="workspace__item">video: 1060 6GB</li>
+            <li class="workspace__item">internet: 500MBs</li>
+            <li class="workspace__item">mouse: razer</li>
+            <li class="workspace__item">keyborard: steelseries Apex</li>
+            <li class="workspace__item">headset: steelseries arctics 5.</li>
          </ul>
    </section>
-   <section class="gallery">
+   <section class="portfolio">
       <div class="container">
-         <h3 class="gallery__title">Portfolio</h3>
-         <ul class="gallery__list">
-            <li class="gallery__item"><a href="#" class="gallery__link">All works</a></li>
-            <li class="gallery__item"><a href="#" class="gallery__link">Graphic design</a></li>
-            <li class="gallery__item"><a href="#" class="gallery__link">Branding</a></li>
-            <li class="gallery__item"><a href="#" class="gallery__link">Web</a></li>
+         <h3 class="portfolio__title title">Portfolio</h3>
+         <ul class="portfolio__list">
+            <li class="portfolio__item">
+               <a href="https://kenzaofficial.github.io/home-healty-food/#" target="_blank" class="portfolio__link">
+                  <img src="img/food.png" alt="healtyfood">
+               </a>
+            </li>
+            <li class="portfolio__item">
+               <a href="" class="portfolio__link"></a>
+            </li>
          </ul>
-         <ul class="gallery__content">
-            <li class="gallery__item"><img src="/img/bag.jpg" alt="bag" class="gallery__image"></li>
-            <li class="gallery__item"><img src="/img/book_2.jpg" alt="book_1" class="gallery__image"></li>
-            <li class="gallery__item"><img src="/img/book_1.jpg" alt="book_2" class="gallery__image"></li>
-            <li class="gallery__item"><img src="/img/lamp.jpg" alt="lamp" class="gallery__image"></li>
-            <li class="gallery__item"><img src="/img/bottles.jpg" alt="bottles" class="gallery__image"></li>
-            <li class="gallery__item"><img src="/img/table.jpg" alt="table" class="gallery__image"></li>
-         </ul>
-         <a class="button gallery__button">All works</a>
-      </div>
-   </section>
-   <section class="review">
-      <div class="container">
-         <h3 class="review__title">Testimonials</h3>
-         <p class="review__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis
-            aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-            sint
-            occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed</p>
-         <div class="review__slider">
-            <div class="review__item"><img src="/img/Photo_1.png" alt="" class="review__image">
-               <span class="review__author">Andrew Jonhson</span>
-               <span class="review__author-description">Web developer</span>
-            </div>
-            <div class="review__item"><img src="/img/Photo_2.png" alt="" class="review__image">
-               <span class="review__author">Andrew Jonhson</span>
-               <span class="review__author-description">Web developer</span>
-            </div>
-            <div class="review__item review__active"><img src="./img/Photo_3.png" alt="" class="review__image">
-               <span class="review__author">Andrew Jonhson</span>
-               <span class="review__author-description">Web developer</span>
-            </div>
-            <div class="review__item"><img src="/img/Photo_4.png" alt="" class="review__image">
-               <span class="review__author">Andrew Jonhson</span>
-               <span class="review__author-description">Web developer</span>
-            </div>
-            <div class="review__item"><img src="/img/Photo_5.png" alt="" class="review__image">
-               <span class="review__author">Andrew Jonhson</span>
-               <span class="review__author-description">Web developer</span>
-            </div>
-         </div>
       </div>
    </section>
    <footer class="footer">
       <div class="container">
-         <div class="footer__contacts">
-            <h3 class="footer__title footer__item">Contact me:</h3>
-            <div class="footer__contact footer__item">
-               <span class="footer__contact-name"></span>
-               <a href="#" class="footer__contact-link">E-mail</a>
-            </div>
-            <div class="footer__contact footer__item">
-               <span class="footer__contact-name"></span>
-               <a href="#" class="footer__contact-link">Skype</a>
-            </div>
-            <div class="footer__contact footer__item">
-               <span class="footer__contact-name"></span>
-               <a href="https://www.github.com" class="footer__contact-link">MY PROFILE LINK</a>
-            </div>
-            <div class="footer__contact footer__item">
-               <span class="footer__contact-name"></span>
-               <a href="#" class="footer__contact-link">Adress</a>
-            </div>
-            <div class="footer__contact footer__item">
-               <span class="footer__contact-name"></span>
-               <a href="tel:+78142332211" class="footer__contact-link">TEL.+7(814)-233-22-11</a>
-            </div>
-         </div>
-         <form class="form">
-            <input class="form__item form__name" type="text" placeholder="Name" name="name">
-            <input class="form__item form__tel" type="tel" placeholder="Phone" name="phone">
-            <input class="form__item form__blank" type="text" placeholder="Message" name="text">
-            <button class="form__button" type="button"> Send Message</button>
-         </form>
-         <span class="footer__copyright">COPYRIGHT © 2017 John Doe</span>
+         <span class="footer__copyright">COPYRIGHT © 2017-2023 Yuriy Stetskyy</span>
       </div>
    </footer>
 </body>
