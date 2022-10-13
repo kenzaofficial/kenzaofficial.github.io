@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
+
 :root {
   --color-white: #fff;
   --color-black: #000;
@@ -62,7 +63,6 @@ a {
 
 .header__logo {
   position: relative;
-  font-size: 20px;
 
   color: var(--color-white);
   text-decoration: none;
@@ -380,7 +380,6 @@ hero .content {
   background-color: #abc990;
 }
 
-.skills__link svg {
   width: 50%;
 }
 
