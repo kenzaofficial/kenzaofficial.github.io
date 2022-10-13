@@ -56,12 +56,19 @@ a {
   padding: 0 10px;
 }
 
+@media (min-width: 767px) {
+  .container {
+    padding: 0 40px;
+  }
+}
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
+  background-color: #4b4d4f;
 }
 
 .header__logo {
@@ -103,22 +110,40 @@ a {
   text-transform: uppercase;
 }
 
+@media (min-width: 767px) {
+  .header__list {
+    padding: 0;
+    display: flex;
+    column-gap: 30px;
+  }
+}
+
 .header__list li {
   list-style: none;
   margin-bottom: 20px;
 }
 
-.header__list li:hover {
-  background-color: #f8fc86;
+@media (min-width: 767px) {
+  .header__list li {
+    margin: 0;
+  }
 }
+
+@media (max-width: 767px) {
+  .header__list li:hover {
+    background-color: #f8fc86;
+  }
+}
+
 .header__list li:hover .header__link {
   color: black;
 }
 
 .header__link {
-  color: var(--color-white);
+  color: #f8fc86;
   text-decoration: none;
-  font-size: 23px;
+  font-size: 21px;
+  transition: 0.3s;
 }
 
 .header__link:active {
@@ -132,6 +157,13 @@ a {
   height: 20px;
   z-index: 3;
 }
+
+@media (min-width: 767px) {
+  .header__burger {
+    display: none;
+  }
+}
+
 .header__burger:hover {
   cursor: pointer;
 }
@@ -191,10 +223,19 @@ a {
   transition: all 0.3s ease 0s;
 }
 
+@media (min-width: 767px) {
+  .header__menu {
+    width: auto;
+    padding: 0;
+    position: static;
+    background-color: transparent;
+    z-index: 5;
+  }
+}
 .header__menu.active {
   top: 0;
 }
-hero .content {
+.hero {
   padding-top: 50px;
 }
 
@@ -356,8 +397,7 @@ hero .content {
   align-items: center;
   justify-content: center;
   column-gap: 20px;
-  }
-
+}
 
 .skills__item {
   margin-bottom: 10px;
@@ -385,15 +425,6 @@ hero .content {
   background-color: #abc990;
 }
 
-  width: 50%;
-}
-
-.skills__description {
-
-}
-
-/* workspace START */
-
 .workspace {
   position: relative;
   padding-top: 20px;
@@ -402,7 +433,7 @@ hero .content {
   background-color: #f3f4ff;
 }
 
-.workspace__title{
+.workspace__title {
   margin-bottom: 20px;
 }
 
@@ -450,7 +481,7 @@ hero .content {
   top: 0;
   left: 0;
   transition: 0.3s;
-  filter: grayscale(0.6);
+  filter: grayscale(0.8);
 }
 
 .portfolio__link img:hover {
