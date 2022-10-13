@@ -66,6 +66,7 @@ a {
 
 .header__logo {
   position: relative;
+  color: #f8fc86;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.5s ease 0s;
@@ -356,7 +357,7 @@ hero .content {
   justify-content: center;
   column-gap: 20px;
   }
-}
+
 
 .skills__item {
   margin-bottom: 10px;
@@ -401,9 +402,8 @@ hero .content {
   background-color: #f3f4ff;
 }
 
-.workspace hr {
-  background-color: #dfdcdc;
-  height: 1px;
+.workspace__title{
+  margin-bottom: 20px;
 }
 
 .workspace__list {
