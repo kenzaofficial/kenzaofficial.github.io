@@ -88,10 +88,6 @@ a {
   height: 50px;
 }
 
-.header__logo:hover {
-  color: indianred;
-}
-
 .header::before {
   position: absolute;
   content: '';
@@ -108,8 +104,8 @@ a {
   padding-top: 10px;
   text-align: center;
   text-transform: uppercase;
+  list-style: none;
 }
-
 @media (min-width: 767px) {
   .header__list {
     padding: 0;
@@ -119,7 +115,6 @@ a {
 }
 
 .header__list li {
-  list-style: none;
   margin-bottom: 20px;
 }
 
@@ -129,14 +124,17 @@ a {
   }
 }
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .header__list li:hover {
     background-color: #f8fc86;
   }
-}
+} */
 
 .header__list li:hover .header__link {
   color: black;
+  background-color: #ffb233;
+  padding: 0 10px;
+  border-radius: 5px;
 }
 
 .header__link {
@@ -156,6 +154,7 @@ a {
   width: 30px;
   height: 20px;
   z-index: 3;
+  background-color: transparent;
 }
 
 @media (min-width: 767px) {
@@ -235,9 +234,6 @@ a {
 .header__menu.active {
   top: 0;
 }
-.hero {
-  padding-top: 50px;
-}
 
 .content__text {
   font-size: 21px;
@@ -248,6 +244,7 @@ a {
   display: grid;
   place-content: center;
   position: relative;
+  padding-top: 50px;
   background-image: url(../img/apple-desk-designer-display.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -279,12 +276,28 @@ a {
   cursor: pointer;
 }
 
-.button__down:active {
+.button__up {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #11a100;
+  bottom: 10%;
+  left: 90%;
+  transform: translate(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.button__down:active,
+.button__up:active {
   background-color: lightseagreen;
 }
 
 .button__down:before,
-.button__down::after {
+.button__down::after,
+.button__up::before,
+.button__up::after {
   content: '';
   position: absolute;
   width: 8px;
@@ -292,15 +305,24 @@ a {
   background-color: #000;
 }
 
-.button__down:before {
+.button__down:before,
+.button__up::before {
   top: 17px;
   left: 11px;
   transform: rotate(45deg);
 }
 
-.button__down::after {
+.button__down::after,
+.button__up::after {
   top: 17px;
   left: 16px;
+  transform: rotate(-45deg);
+}
+
+.button__up::after {
+  transform: rotate(45deg);
+}
+.button__up::before {
   transform: rotate(-45deg);
 }
 
@@ -403,7 +425,7 @@ a {
   margin-bottom: 10px;
   display: grid;
   place-items: center;
-  list-style: none;
+
   margin-bottom: 10px;
 }
 
@@ -430,7 +452,7 @@ a {
   padding-top: 20px;
   padding-bottom: 50px;
   color: var(--color-black);
-  background-color: #f3f4ff;
+  background-color: #87e3ff;
 }
 
 .workspace__title {
@@ -438,7 +460,9 @@ a {
 }
 
 .workspace__list {
+  padding-left: 20px;
 }
+
 .portfolio {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -587,16 +611,6 @@ a {
 
 .footer__copyright {
   font-size: 14px;
-}
-
-svg {
-  width: 70px;
-  height: 70px;
-}
-
-svg {
-  width: 70px;
-  height: 70px;
 }
 
 svg {
