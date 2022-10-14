@@ -68,8 +68,6 @@ a {
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: #4b4d4f;
-}
 
 .header__logo {
   position: relative;
@@ -235,7 +233,8 @@ a {
 .header__menu.active {
   top: 0;
 }
-.hero {
+
+hero .content {
   padding-top: 50px;
 }
 
@@ -398,7 +397,11 @@ a {
   justify-content: center;
   column-gap: 20px;
 }
-
+@media (min-width: 767px) {
+  .skills__list {
+    column-gap: 60px;
+  }
+}
 .skills__item {
   margin-bottom: 10px;
   display: grid;
@@ -415,12 +418,10 @@ a {
   display: grid;
   place-items: center;
 }
-
 .skills__link:hover {
   background-color: #30ad29;
   box-shadow: 0px 0px 4px 5px #1e801a;
 }
-
 .skills__link:active {
   background-color: #abc990;
 }
@@ -435,10 +436,8 @@ a {
 
 .workspace__title {
   margin-bottom: 20px;
-}
 
-.workspace__list {
-}
+
 .portfolio {
   padding-top: 20px;
   padding-bottom: 30px;
@@ -482,6 +481,7 @@ a {
   left: 0;
   transition: 0.3s;
   filter: grayscale(0.8);
+
 }
 
 .portfolio__link img:hover {
@@ -587,6 +587,11 @@ a {
 
 .footer__copyright {
   font-size: 14px;
+}
+
+svg {
+  width: 70px;
+  height: 70px;
 }
 
 svg {
