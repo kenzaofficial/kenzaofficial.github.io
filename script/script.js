@@ -9,17 +9,13 @@ document.addEventListener("DOMContentLoaded",() => {
       this.classList.toggle('active');
       headerMenu.classList.toggle('active');
    })
- 
+
    for ( let i= 0; i < headerLink.length; i++) {
       headerLink[i].addEventListener('click', function() {
          headerMenu.classList.remove('active');
+         headerBurger.classList.remove('active');
       })
    }
-   document.addEventListener('click', function(e){
-        if(headerMenuButton !== e.target){
-            headerMenu.classList.remove("active");
-        }
-    });
 });
 
 
