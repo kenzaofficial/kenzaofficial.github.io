@@ -49,11 +49,10 @@ a {
   text-transform: uppercase;
 }
 
-.container {
-  max-width: 1240px;
-  width: 100%;
+[class*="__container"] {
   margin: 0 auto;
   padding: 0 10px;
+  max-width: 1240px;
 }
 
 @media (min-width: 767px) {
@@ -62,22 +61,66 @@ a {
   }
 }
 
+/* поведение меню при выключенном джаваскрипте */
+@media (max-width: 767px) {
+  .no-js .header {
+    position: static;
+  }
+
+  .no-js .header__container {
+    padding: 0;
+  }
+  .no-js .header__body {
+    height: auto;
+    flex-direction: column;
+  }
+  .no-js .header__logo {
+    padding: 10px;
+    align-self: flex-start;
+  }
+  .no-js .menu__list {
+    text-align: center;
+  }
+  .no-js .header__menu {
+    position: static;
+    padding-top: 20px;
+  }
+}
+
+.no-js .header__menu::before {
+  display: none;
+}
+
+.no-js .header__burger-button {
+  display: none;
+}
+
+.no-js .header__menu {
+  right: 0;
+  height: auto;
+}
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
-  background-color: #191919;
+  background-color: rgba(25, 25, 25, 0.7);
 }
 
 .header__logo {
   position: relative;
+  font-size: 18px;
   color: #f8fc86;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.5s ease 0s;
   z-index: 5;
+}
+
+.header__logo.active {
+  color: #fff;
 }
 
 .header__body {
@@ -87,17 +130,6 @@ a {
   align-items: center;
   height: 50px;
 }
-
-/* .header::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #192919;
-  z-index: 3;
-} */
 
 .menu__list {
   display: block;
@@ -123,12 +155,6 @@ a {
     margin: 0;
   }
 }
-
-/* @media (max-width: 767px) {
-  .menu__list li:hover {
-    background-color: #f8fc86;
-  }
-} */
 
 .menu__list li:hover .header__link {
   color: black;
@@ -479,11 +505,23 @@ a {
   background: url(../img/workspace.jpg) center / cover no-repeat;
 }
 
+.blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
 .workspace__title {
   margin-bottom: 20px;
 }
 
 .workspace__list {
+  /* Это единственный способ каким я смог достать текст из под блюра */
+  position: relative;
   padding-left: 20px;
 }
 
@@ -638,6 +676,6 @@ a {
 }
 
 svg {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
