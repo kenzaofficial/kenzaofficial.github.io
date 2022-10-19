@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
 
 :root {
   --color-white: #fff;
@@ -49,7 +49,7 @@ a {
   text-transform: uppercase;
 }
 
-[class*="__container"] {
+[class*='__container'] {
   margin: 0 auto;
   padding: 0 10px;
   max-width: 1240px;
@@ -195,7 +195,7 @@ a {
 
 .header__burger-button:before,
 .header__burger-button:after {
-  content: "";
+  content: '';
   background-color: #f8fc86;
   position: absolute;
   width: 100%;
@@ -250,7 +250,7 @@ a {
 
 .header__menu::before {
   position: absolute;
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   width: 100%;
@@ -329,7 +329,12 @@ a {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: #11a100;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    72deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(64, 215, 83, 1) 100%
+  );
   bottom: 10%;
   left: 90%;
   transform: translate(-50%);
@@ -346,7 +351,7 @@ a {
 .button__down::after,
 .button__up::before,
 .button__up::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 8px;
   height: 2px;
@@ -499,30 +504,37 @@ a {
 
 .workspace {
   position: relative;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 50px;
   color: #fff;
-  background: url(../img/workspace.jpg) center / cover no-repeat;
+  background: black url(../img/workspace.jpg) center / cover no-repeat;
 }
 
-.blur {
+.workspace__blur {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
 }
 
 .workspace__title {
+  position: relative;
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 .workspace__list {
   /* Это единственный способ каким я смог достать текст из под блюра */
   position: relative;
   padding-left: 20px;
+  columns: 2;
+}
+
+.workspace__item {
+  padding-right: 20px;
 }
 
 .portfolio {
@@ -577,9 +589,8 @@ a {
 
 .footer {
   padding-top: 20px;
-  padding-bottom: 10px;
-  background: url(../img/footer.jpg) no-repeat;
-  background-size: cover;
+  padding-bottom: 20px;
+  background-color: #000;
   text-align: center;
 }
 
@@ -673,6 +684,7 @@ a {
 
 .footer__copyright {
   font-size: 14px;
+  font-weight: normal;
 }
 
 svg {
