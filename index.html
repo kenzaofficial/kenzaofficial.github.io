@@ -2,203 +2,191 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-   <title>Stetskyy</title>
-   <link rel="stylesheet" href="./css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Stetskyy</title>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body>
-   <section class="hero">
-      <header class="header">
-         <div class="container">
-            <div class="header__body">
-               <a class="header__logo">
-                  kenzaofficial.github.io
-               </a>
-               <div class="header__burger">
-                  <span></span>
-               </div>
-               <nav class="header__menu">
-                  <ul class="header__list">
-                     <li>
-                        <a href="#aboutme" class="header__link">About me</a>
-                     </li>
-                     <li>
-                        <a href="#skills" class="header__link">Skills</a>
-                     </li>
-                     <li>
-                        <a href="#portfolio" class="header__link">Portfolio</a>
-                     </li>
-                     <li>
-                        <a href="#workspace" class="header__link">Workspace</a>
-                     </li>
-                  </ul>
-               </nav>
-            </div>
-         </div>
-      </header>
+<body class="no-js">
+  <main class="main">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__body">
+          <a class="header__logo">
+            kenzaofficial.github.io
+          </a>
+          <button type="button" class="header__burger-button" id="headerMenuButton">
+            <span></span>
+          </button>
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li>
+                <a href="#aboutme" class="header__link">About me</a>
+              </li>
+              <li>
+                <a href="#skills" class="header__link">Skills</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="header__link">Portfolio</a>
+              </li>
+              <li>
+                <a href="#workspace" class="header__link">Workspace</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="hero" id="hero">
       <h2 class="hero__title title title">Hi!<br>I am Yuriy Stetskyy</h2>
-
       <p class="hero__subtitle">Web Developer</p>
-      <button type="button" class="button__down"></button>
-   </section>
-   <section class="description" id="aboutme">
-      <div class="container">
-         <h4 class="description__title title">About me</h4>
-
-         <div class="description__image"><img src="img/foto_1.jpg">
-         </div>
-         <h6 class="description__subtitle">I am 29 years old</h6>
-         <p class="description__text">Hello,My name is Yuriy i am web-developer.I live in Ukraine.
-            I am glad to see you here, that generally means that you are interested in me at least.
-            I am confident at
-            html,css and my js expierence is 6 year so far, but i am ready to take any js task and always ready to do
-            it!
-         </p>
-         <p class="description__text">
-            I always try to do my best and i dont feel good until my task is done.
-            .U can always check my works below and leave comment if u noticed something usefull to
-            tell
-            me.I'm fine with criticism so i will be glad to fix any bug.
-            I'm always in touch so u can ask me at any time if you have questions!
-            Best wishes!
-            Your humble servant Yuriy!
-         </p>
-
-         <p class="description__text">
-            I always try to do my best and i dont feel good until my task is done.
-            .U can always check my works below and leave comment if u noticed something usefull to
-            tell
-            me.I'm fine with criticism so i will be glad to fix any bug.
-            I'm always in touch so u can ask me at any time if you have questions!
-            Best wishes!
-            Your humble servant Yuriy!
-         </p>
-
-         <div class="social">
-            <a href="https://t.me/kenzzaa" target="_blank" class="social__link">
-               <svg>
-                  <use href="img/sprite.svg#telegram-icon"></use>
-               </svg>
+      <a href="#aboutme" type="button" class="button__down"></a>
+      <a href="#hero" type="button" class="button__up"></a>
+    </section>
+    <section class="description" id="aboutme">
+      <div class="description__container">
+        <h4 class="description__title title">About me</h4>
+        <div class="description__image"><img src="img/foto_1.jpg">
+        </div>
+        <h6 class="description__subtitle">I am 29 years old</h6>
+        <p class="description__text">Hello,My name is Yuriy i am web-developer.I live in Ukraine.
+          I am glad to see you here, that generally means that you are interested in me at least.
+          I am confident at
+          html,css and my js expierence is 6 year so far, but i am ready to take any js task and always ready to do
+          it!
+        </p>
+        <p class="description__text">
+          I always try to do my best and i dont feel good until my task is done.
+          .U can always check my works below and leave comment if u noticed something usefull to
+          tell
+          me.I'm fine with criticism so i will be glad to fix any bug.
+          I'm always in touch so u can ask me at any time if you have questions!
+          Best wishes!
+          Your humble servant Yuriy!
+        </p>
+        <div class="social">
+          <a href="https://t.me/kenzzaa" target="_blank" class="social__link">
+            <svg>
+              <use href="img/sprite.svg#telegram-icon"></use>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/yuriy-stetskyy-0202a1243/" target="_blank" class="social__link">
+            <svg>
+              <use href="img/sprite.svg#linkedin-icon"></use>
+            </svg>
+          </a>
+          <a href="mailto:henkerofficial@gmail.com" target="_blank" class="social__link">
+            <svg>
+              <use href="img/sprite.svg#gmail-icon"></use>
+            </svg>
+          </a>
+        </div>
+        <a class="button description__button">Download my CV</a>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="skills__container">
+        <h3 class="skills__title title">My skills</h3>
+        <ul class="skills__list">
+          <li class="skills__item">
+            <div class="skills__img">
+              <svg alt="html-icon">
+                <use href="img/sprite.svg#html-icon"></use>
+              </svg>
+            </div>
+            <p class="skills__description">HTML 5</p>
+          </li>
+          <li class="skills__item">
+            <div class="skills__img">
+              <svg alt="css-icon">
+                <use href="img/sprite.svg#css-icon"></use>
+              </svg>
+            </div>
+            <p class="skills__description">CSS 3</p>
+          </li>
+          <li class="skills__item">
+            <div class="skills__img">
+              <svg alt="js-icon">
+                <use href="img/sprite.svg#js-icon"></use>
+              </svg>
+            </div>
+            <p class="skills__description">Javascript</p>
+          </li>
+          <li class="skills__item">
+            <div class="skills__img">
+              <svg alt="sass-icon">
+                <use href="img/sprite.svg#sass-icon"></use>
+              </svg>
+            </div>
+            <p class="skills__description">Sass</p>
+          </li>
+          <li class="skills__item">
+            <div class="skills__img">
+              <svg alt="figma-icon">
+                <use href="img/sprite.svg#figma-icon"></use>
+              </svg>
+            </div>
+            <p class="skills__description">Figma</p>
+          </li>
+          <li class="skills__item">
+            <div class="skills__img">
+              <svg alt="github-icon">
+                <use href="img/sprite.svg#github-icon"></use>
+              </svg>
+            </div>
+            <p class="skills__description">Github</p>
+          </li>
+          <li class="skills__item">
+            <div class="skills__img">
+              <svg alt="github-icon">
+                <use href="img/sprite.svg#git-icon"></use>
+              </svg>
+            </div>
+            <p class="skills__description">Git</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio__container">
+        <h3 class="portfolio__title title">Portfolio</h3>
+        <ul class="portfolio__list">
+          <li class="portfolio__item">
+            <a href="https://kenzaofficial.github.io/home-healty-food/#" target="_blank" class="portfolio__link">
+              <img src="img/food.png" alt="healtyfood">
             </a>
-            <a href="https://www.linkedin.com/in/yuriy-stetskyy-0202a1243/" target="_blank" class="social__link">
-               <svg>
-                  <use href="img/sprite.svg#linkedin-icon"></use>
-               </svg>
-            </a>
-            <a href="mailto:henkerofficial@gmail.com" target="_blank" class="social__link">
-               <svg>
-                  <use href="img/sprite.svg#gmail-icon"></use>
-               </svg>
-            </a>
-         </div>
-         <a class="button description__button">Download my CV</a>
+          </li>
+        </ul>
       </div>
-   </section>
-   <section class="skills" id="skills">
-      <div class="container">
-         <h3 class="skills__title title">My skills</h3>
-         <ul class="skills__list">
-            <li class="skills__item">
-               <div class="skills__img">
-                  <svg alt="html-icon">
-                     <use href="img/sprite.svg#html-icon"></use>
-                  </svg>
-               </div>
-               <p class="skills__description">HTML 5</p>
-            </li>
-            <li class="skills__item">
-               <div class="skills__img">
-                  <svg alt="css-icon">
-                     <use href="img/sprite.svg#css-icon"></use>
-                  </svg>
-               </div>
-               <p class="skills__description">CSS 3</p>
-            </li>
-            <li class="skills__item">
-               <div class="skills__img">
-                  <svg alt="js-icon">
-                     <use href="img/sprite.svg#js-icon"></use>
-                  </svg>
-               </div>
-               <p class="skills__description">Javascript</p>
-            </li>
-            <li class="skills__item">
-               <div class="skills__img">
-                  <svg alt="sass-icon">
-                     <use href="img/sprite.svg#sass-icon"></use>
-                  </svg>
-               </div>
-               <p class="skills__description">Sass</p>
-            </li>
-            <li class="skills__item">
-               <div class="skills__img">
-                  <svg alt="figma-icon">
-                     <use href="img/sprite.svg#figma-icon"></use>
-                  </svg>
-               </div>
-               <p class="skills__description">Figma</p>
-            </li>
-            <li class="skills__item">
-               <div class="skills__img">
-                  <svg alt="github-icon">
-                     <use href="img/sprite.svg#github-icon"></use>
-                  </svg>
-               </div>
-               <p class="skills__description">Github</p>
-            </li>
-            <li class="skills__item">
-               <div class="skills__img">
-                  <svg alt="github-icon">
-                     <use href="img/sprite.svg#git-icon"></use>
-                  </svg>
-               </div>
+    </section>
+    <section class="workspace" id="workspace">
+      <div class="workspace__blur"></div>
+      <div class="workspace__container">
+        <h4 class="workspace__title title">
+          My workspace
+        </h4>
+        <ul class="workspace__list">
+          <li class="workspace__item">Monitors: Philips 24, Samsung 24</li>
+          <li class="workspace__item">RAM: 16gb</li>
+          <li class="workspace__item">processor: Ryzen 5 1600X</li>
+          <li class="workspace__item">video: 1060 6GB</li>
+          <li class="workspace__item">internet: 500MBs</li>
+          <li class="workspace__item">mouse: razer</li>
+          <li class="workspace__item">keyborard: steelseries Apex</li>
+          <li class="workspace__item">headset: steelseries arctics 5.</li>
+        </ul>
+    </section>
+  </main>
 
-               <p class="skills__description">Git</p>
-            </li>
-         </ul>
-      </div>
-   </section>
-   <section class="portfolio" id="portfolio">
-      <div class="container">
-         <h3 class="portfolio__title title">Portfolio</h3>
-         <ul class="portfolio__list">
-            <li class="portfolio__item">
-               <a href="https://kenzaofficial.github.io/home-healty-food/#" target="_blank" class="portfolio__link">
-                  <img src="img/food.png" alt="healtyfood">
-               </a>
-            </li>
-            <li class="portfolio__item">
-               <a href="" class="portfolio__link"></a>
-            </li>
-         </ul>
-      </div>
-   </section>
-   <section class="workspace" id="workspace">
-      <div class="container">
-         <h4 class="workspace__title title">
-            My workspace
-         </h4>
-         <ul class="workspace__list">
-            <li class="workspace__item">Monitors: Philips 24, Samsung 24</li>
-            <li class="workspace__item">RAM: 16gb</li>
-            <li class="workspace__item">processor: Ryzen 5 1600X</li>
-            <li class="workspace__item">video: 1060 6GB</li>
-            <li class="workspace__item">internet: 500MBs</li>
-            <li class="workspace__item">mouse: razer</li>
-            <li class="workspace__item">keyborard: steelseries Apex</li>
-            <li class="workspace__item">headset: steelseries arctics 5.</li>
-         </ul>
-   </section>
-
-   <footer class="footer">
-      <div class="container">
-         <span class="footer__copyright">COPYRIGHT © 2017-2023 Yuriy Stetskyy</span>
-      </div>
-   </footer>
+  <footer class="footer">
+    <div class="footer__container">
+      <span class="footer__copyright">COPYRIGHT © 2017-2023 Yuriy Stetskyy</span>
+    </div>
+  </footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="./script/script.js"></script>
+
 </html>

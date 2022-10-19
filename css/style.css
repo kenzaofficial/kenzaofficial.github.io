@@ -49,11 +49,10 @@ a {
   text-transform: uppercase;
 }
 
-.container {
-  max-width: 1240px;
-  width: 100%;
+[class*='__container'] {
   margin: 0 auto;
   padding: 0 10px;
+  max-width: 1240px;
 }
 
 @media (min-width: 767px) {
@@ -62,21 +61,66 @@ a {
   }
 }
 
+/* поведение меню при выключенном джаваскрипте */
+@media (max-width: 767px) {
+  .no-js .header {
+    position: static;
+  }
+
+  .no-js .header__container {
+    padding: 0;
+  }
+  .no-js .header__body {
+    height: auto;
+    flex-direction: column;
+  }
+  .no-js .header__logo {
+    padding: 10px;
+    align-self: flex-start;
+  }
+  .no-js .menu__list {
+    text-align: center;
+  }
+  .no-js .header__menu {
+    position: static;
+    padding-top: 20px;
+  }
+}
+
+.no-js .header__menu::before {
+  display: none;
+}
+
+.no-js .header__burger-button {
+  display: none;
+}
+
+.no-js .header__menu {
+  right: 0;
+  height: auto;
+}
+
 .header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
+  background-color: rgba(25, 25, 25, 0.7);
 }
 
 .header__logo {
   position: relative;
+  font-size: 18px;
   color: #f8fc86;
   text-decoration: none;
   letter-spacing: 1px;
   transition: all 0.5s ease 0s;
   z-index: 5;
+}
+
+.header__logo.active {
+  color: #fff;
 }
 
 .header__body {
@@ -87,55 +131,36 @@ a {
   height: 50px;
 }
 
-.header__logo:hover {
-  color: indianred;
-}
-
-.header::before {
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-gray);
-  z-index: 3;
-}
-
-.header__list {
+.menu__list {
   display: block;
   padding-top: 10px;
-  text-align: center;
+  text-align: right;
   text-transform: uppercase;
+  list-style: none;
 }
-
 @media (min-width: 767px) {
-  .header__list {
+  .menu__list {
     padding: 0;
     display: flex;
     column-gap: 30px;
   }
 }
 
-.header__list li {
-  list-style: none;
+.menu__list li {
   margin-bottom: 20px;
 }
 
 @media (min-width: 767px) {
-  .header__list li {
+  .menu__list li {
     margin: 0;
   }
 }
 
-@media (max-width: 767px) {
-  .header__list li:hover {
-    background-color: #f8fc86;
-  }
-}
-
-.header__list li:hover .header__link {
+.menu__list li:hover .header__link {
   color: black;
+  background-color: #ffb233;
+  padding: 0 10px;
+  border-radius: 5px;
 }
 
 .header__link {
@@ -149,26 +174,27 @@ a {
   color: indianred;
 }
 
-.header__burger {
+.header__burger-button {
   position: relative;
   display: block;
   width: 30px;
   height: 20px;
   z-index: 3;
+  background-color: transparent;
 }
 
 @media (min-width: 767px) {
-  .header__burger {
+  .header__burger-button {
     display: none;
   }
 }
 
-.header__burger:hover {
+.header__burger-button:hover {
   cursor: pointer;
 }
 
-.header__burger:before,
-.header__burger:after {
+.header__burger-button:before,
+.header__burger-button:after {
   content: '';
   background-color: #f8fc86;
   position: absolute;
@@ -178,15 +204,15 @@ a {
   transition: all 0.3s ease 0s;
 }
 
-.header__burger:before {
+.header__burger-button:before {
   top: 0;
 }
 
-.header__burger:after {
+.header__burger-button:after {
   bottom: 0;
 }
 
-.header__burger span {
+.header__burger-button span {
   position: absolute;
   background-color: #f8fc86;
   left: 0;
@@ -196,47 +222,65 @@ a {
   transition: all 0.3s ease 0s;
 }
 
-.header__burger.active span {
+.header__burger-button.active span {
   transform: scale(0);
 }
 
-.header__burger.active::before {
+.header__burger-button.active::before {
   transform: rotate(45deg);
   top: 9px;
 }
 
-.header__burger.active::after {
+.header__burger-button.active::after {
   transform: rotate(-45deg);
   bottom: 9px;
 }
 
 .header__menu {
   position: fixed;
-  top: -100%;
-  left: 0;
+  top: 0;
+  right: -100%;
   padding: 10px 10px;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding-top: 50px;
   background-color: #191919;
   transition: all 0.3s ease 0s;
 }
 
+.header__menu::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(113, 0, 44, 0.8491771708683473) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  z-index: 10;
+}
+
 @media (min-width: 767px) {
   .header__menu {
     width: auto;
+    height: auto;
     padding: 0;
     position: static;
     background-color: transparent;
     z-index: 5;
   }
-}
-.header__menu.active {
-  top: 0;
+  .header__menu::before {
+    display: none;
+  }
 }
 
-hero .content {
-  padding-top: 50px;
+.header__menu.active {
+  right: 0;
 }
 
 .content__text {
@@ -248,6 +292,7 @@ hero .content {
   display: grid;
   place-content: center;
   position: relative;
+  padding-top: 50px;
   background-image: url(../img/apple-desk-designer-display.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -279,12 +324,33 @@ hero .content {
   cursor: pointer;
 }
 
-.button__down:active {
+.button__up {
+  position: fixed;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    72deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(64, 215, 83, 1) 100%
+  );
+  bottom: 10%;
+  left: 90%;
+  transform: translate(-50%);
+  cursor: pointer;
+  z-index: 10;
+}
+
+.button__down:active,
+.button__up:active {
   background-color: lightseagreen;
 }
 
 .button__down:before,
-.button__down::after {
+.button__down::after,
+.button__up::before,
+.button__up::after {
   content: '';
   position: absolute;
   width: 8px;
@@ -292,15 +358,24 @@ hero .content {
   background-color: #000;
 }
 
-.button__down:before {
+.button__down:before,
+.button__up::before {
   top: 17px;
   left: 11px;
   transform: rotate(45deg);
 }
 
-.button__down::after {
+.button__down::after,
+.button__up::after {
   top: 17px;
   left: 16px;
+  transform: rotate(-45deg);
+}
+
+.button__up::after {
+  transform: rotate(45deg);
+}
+.button__up::before {
   transform: rotate(-45deg);
 }
 
@@ -407,7 +482,7 @@ hero .content {
   margin-bottom: 10px;
   display: grid;
   place-items: center;
-  list-style: none;
+
   margin-bottom: 10px;
 }
 
@@ -429,14 +504,37 @@ hero .content {
 
 .workspace {
   position: relative;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 50px;
-  color: var(--color-black);
-  background-color: #f3f4ff;
+  color: #fff;
+  background: black url(../img/workspace.jpg) center / cover no-repeat;
+}
+
+.workspace__blur {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
 }
 
 .workspace__title {
+  position: relative;
   margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.workspace__list {
+  /* Это единственный способ каким я смог достать текст из под блюра */
+  position: relative;
+  padding-left: 20px;
+  columns: 2;
+}
+
+.workspace__item {
+  padding-right: 20px;
 }
 
 .portfolio {
@@ -491,9 +589,8 @@ hero .content {
 
 .footer {
   padding-top: 20px;
-  padding-bottom: 10px;
-  background: url(../img/footer.jpg) no-repeat;
-  background-size: cover;
+  padding-bottom: 20px;
+  background-color: #000;
   text-align: center;
 }
 
@@ -587,24 +684,10 @@ hero .content {
 
 .footer__copyright {
   font-size: 14px;
+  font-weight: normal;
 }
 
 svg {
-  width: 70px;
-  height: 70px;
-}
-
-svg {
-  width: 70px;
-  height: 70px;
-}
-
-svg {
-  width: 70px;
-  height: 70px;
-}
-
-svg {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
 }
