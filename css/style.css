@@ -29,6 +29,10 @@ a {
   color: inherit;
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .button {
   display: inline-block;
   padding: 17px 20px;
@@ -311,7 +315,7 @@ a {
   text-align: center;
 }
 
-.button__down {
+.button-down {
   position: absolute;
   width: 35px;
   height: 35px;
@@ -323,7 +327,7 @@ a {
   cursor: pointer;
 }
 
-.button__up {
+.button-up {
   position: fixed;
   width: 35px;
   height: 35px;
@@ -340,15 +344,15 @@ a {
   z-index: 10;
 }
 
-.button__down:active,
-.button__up:active {
+.button-down:active,
+.button-up:active {
   background-color: lightseagreen;
 }
 
-.button__down:before,
-.button__down::after,
-.button__up::before,
-.button__up::after {
+.button-down:before,
+.button-down::after,
+.button-up::before,
+.button-up::after {
   content: "";
   position: absolute;
   width: 8px;
@@ -356,24 +360,24 @@ a {
   background-color: #000;
 }
 
-.button__down:before,
-.button__up::before {
+.button-down:before,
+.button-up::before {
   top: 17px;
   left: 11px;
   transform: rotate(45deg);
 }
 
-.button__down::after,
-.button__up::after {
+.button-down::after,
+.button-up::after {
   top: 17px;
   left: 16px;
   transform: rotate(-45deg);
 }
 
-.button__up::after {
+.button-up::after {
   transform: rotate(45deg);
 }
-.button__up::before {
+.button-up::before {
   transform: rotate(-45deg);
 }
 
