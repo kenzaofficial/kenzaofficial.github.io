@@ -1,10 +1,9 @@
 document.addEventListener("DOMContentLoaded",() => {
    const headerBurger = document.querySelector(".header__burger-button");
-   const headerMenu = document.querySelector(".header__menu");
    const headerLink = document.querySelectorAll(".header__link");
-   const headerLogo = document.querySelector(".header__logo");
    const body = document.querySelector('.no-js');
    const buttonUp = document.querySelector('.button-up');
+   const headerBody = document.querySelector('.header__body');
 
 
    if(body.classList.contains('no-js')) {
@@ -12,18 +11,15 @@ document.addEventListener("DOMContentLoaded",() => {
    }
 
    headerBurger.addEventListener('click', function () {
-      this.classList.toggle('active');
-      headerMenu.classList.toggle('active');
-      headerLogo.classList.toggle('active');
-      body.classList.toggle('overflow-hidden');
+    headerBody.classList.toggle('header-menu--active')
+      body.classList.toggle('scroll-lock');
       buttonUp.toggleAttribute('hidden');
    })
 
    for ( let i= 0; i < headerLink.length; i++) {
       headerLink[i].addEventListener('click', function() {
-         headerMenu.classList.remove('active');
-         headerBurger.classList.remove('active');
-          body.classList.remove('overflow-hidden');
+        headerBody.classList.remove('header-menu--active')
+          body.classList.remove('scroll-lock');
           buttonUp.removeAttribute('hidden');
       })
    }
