@@ -1,24 +1,25 @@
-document.addEventListener("DOMContentLoaded",() => {
-   const headerMenuButton = document.querySelector("#headerMenuButton");
-   const headerBurger = document.querySelector(".header__burger-button");
-   // зачем мне дополнительная переменная на один и тот же елемент?
-   const headerMenu = document.querySelector(".header__menu");
-   const headerLink = document.querySelectorAll(".header__link");
-   const headerLogo = document.querySelector(".header__logo");
+document.addEventListener('DOMContentLoaded', () => {
+  const headerBurger = document.querySelector('.header__burger-button');
+  const headerLink = document.querySelectorAll('.header__link');
+  const body = document.querySelector('.no-js');
+  const buttonUp = document.querySelector('.button-up');
+  const headerBody = document.querySelector('.header__body');
 
-   headerMenuButton.addEventListener('click', function () {
-      this.classList.toggle('active');
-      headerMenu.classList.toggle('active');
-      headerLogo.classList.toggle('active');
-   })
+  if (body.classList.contains('no-js')) {
+    body.classList.remove('no-js');
+  }
 
-   for ( let i= 0; i < headerLink.length; i++) {
-      headerLink[i].addEventListener('click', function() {
-         headerMenu.classList.remove('active');
-         headerBurger.classList.remove('active');
-      })
-   }
+  headerBurger.addEventListener('click', function () {
+    headerBody.classList.toggle('header-menu--active');
+    body.classList.toggle('scroll-lock');
+    buttonUp.toggleAttribute('hidden');
+  });
+
+  for (let i = 0; i < headerLink.length; i++) {
+    headerLink[i].addEventListener('click', function () {
+      headerBody.classList.remove('header-menu--active');
+      body.classList.remove('scroll-lock');
+      buttonUp.removeAttribute('hidden');
+    });
+  }
 });
-
-
-
