@@ -23,3 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+function changeText(element, text) {
+  element.textContent = text;
+}
+
+function createUl(cb) {
+  const workspace = document.querySelector('#workspace');
+  const Ul = document.createElement('ul');
+  const li = document.createElement('li');
+  Ul.classList.add('workspace__list');
+  li.classList.add('workspace__item');
+  workspace.appendChild(Ul);
+  Ul.appendChild(li);
+  cb(li, 'Monitors: Philips 24, Samsung 24');
+}
+
+createUl(changeText);
