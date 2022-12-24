@@ -28,7 +28,7 @@ function changeText(element, text) {
   element.textContent = text;
 }
 
-function createUl(cb) {
+function createUl() {
   const workspace = document.querySelector('#workspace');
   const Ul = document.createElement('ul');
   const li = document.createElement('li');
@@ -36,7 +36,8 @@ function createUl(cb) {
   li.classList.add('workspace__item');
   workspace.appendChild(Ul);
   Ul.appendChild(li);
-  cb(li, 'Monitors: Philips 24, Samsung 24');
+  li.innerHTML = 'Monitors: Philips 24, Samsung 24';
+  // cb(li, 'Monitors: Philips 24, Samsung 24');
 }
 
-createUl(changeText);
+// createUl(changeText);
