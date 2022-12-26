@@ -24,20 +24,45 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-function changeText(element, text) {
-  element.textContent = text;
-}
+function workspaceItemsInit() {
+  const workspaceItems = [
+    {
+      itemName: 'Monitors: Philips 24, Samsung 24',
+    },
+    {
+      itemName: 'RAM: 16gb',
+    },
+    {
+      itemName: 'processor: Ryzen 5 1600X',
+    },
+    {
+      itemName: 'video: 1060 6GB',
+    },
+    {
+      itemName: 'internet: 500MBs',
+    },
+    {
+      itemName: 'keyborard: steelseries Apex',
+    },
+    {
+      itemName: 'headset: steelseries arctics 5',
+    },
+    {
+      itemName: 'table: very comfortable from IKEA',
+    },
+  ];
 
-function createUl() {
-  const workspace = document.querySelector('#workspace');
-  const Ul = document.createElement('ul');
-  const li = document.createElement('li');
-  Ul.classList.add('workspace__list');
-  li.classList.add('workspace__item');
-  workspace.appendChild(Ul);
-  Ul.appendChild(li);
-  li.innerHTML = 'Monitors: Philips 24, Samsung 24';
-  // cb(li, 'Monitors: Philips 24, Samsung 24');
-}
+  if ('content' in document.createElement('template')) {
+    const workspaceListElement = document.querySelector('.workspace__list');
+    const templateItem = document.querySelector('#productrow');
 
-// createUl(changeText);
+    for (let i = 0; i < workspaceItems.length; i++) {
+      const templateItemClone = templateItem.content.cloneNode(true);
+      const workspaceItem =
+        templateItemClone.querySelectorAll('.workspace__item');
+      workspaceItem[0].textContent = workspaceItems[i].itemName;
+      workspaceListElement.appendChild(templateItemClone);
+    }
+  }
+}
+workspaceItemsInit();
