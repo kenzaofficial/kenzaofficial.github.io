@@ -64,5 +64,28 @@ function workspaceItemsInit() {
       workspaceListElement.appendChild(templateItemClone);
     }
   }
+  const modal = document.getElementById("myModal");
+  const openModalButton = document.getElementById("modalButton");
+  const closeModalButton = document.querySelector(".close");
+  const body = document.querySelector('body');
+
+  openModalButton.onclick = function () {
+    modal.classList.add('modal--active');
+    body.classList.add('scroll-lock');
+  }
+
+  closeModalButton.onclick = function () {
+    modal.classList.remove('modal--active');
+    body.classList.remove('scroll-lock');
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.classList.remove('modal--active');
+      body.classList.remove('scroll-lock');
+    }
+  }
 }
 workspaceItemsInit();
+
+
