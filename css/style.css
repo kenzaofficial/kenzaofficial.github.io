@@ -368,15 +368,16 @@ a {
 .button-up::after {
   content: '';
   position: absolute;
-  width: 8px;
+  width: 10px;
   height: 2px;
   background-color: #000;
+  border-radius: 2px;
 }
 
 .hero__button-down:before,
 .button-up::before {
   top: 17px;
-  left: 11px;
+  left: 10px;
   transform: rotate(45deg);
 }
 
@@ -726,6 +727,11 @@ svg {
   visibility: hidden;
 }
 
+.modal--active {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .hero__button-modal {
   display: inline-block;
@@ -793,10 +799,11 @@ svg {
 /* Стили для скроллбара */
 ::-webkit-scrollbar {
   width: 10px; /* Указываем ширину скроллбара */
+  background-color: #333;
 }
 
 /* Стили для полосы скролла */
 ::-webkit-scrollbar-thumb {
-  background-color: #ccc; /* Цвет скроллбара */
+  background-color: #abc990; /* Цвет скроллбара */
   border-radius: 10px; /* Радиус скроллбара */
 }
