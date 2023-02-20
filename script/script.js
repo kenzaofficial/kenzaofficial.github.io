@@ -22,6 +22,15 @@ document.addEventListener('DOMContentLoaded', () => {
       buttonUp.removeAttribute('hidden');
     });
   }
+
+  window.addEventListener('scroll', function() {
+    let scrollY = window.scrollY || document.documentElement.scrollTop;
+    if (scrollY > window.innerHeight / 2) {
+      buttonUp.style.display = 'inline-block';
+    } else {
+      buttonUp.style.display = 'none';
+    }
+  });
 });
 
 function workspaceItemsInit() {
@@ -72,17 +81,24 @@ function workspaceItemsInit() {
   openModalButton.onclick = function () {
     modal.classList.add('modal--active');
     body.classList.add('scroll-lock');
+    body.style.paddingRight = "10px";
+    modal.style.marginRight = "-10px";
   }
 
   closeModalButton.onclick = function () {
     modal.classList.remove('modal--active');
     body.classList.remove('scroll-lock');
+    body.style.paddingRight = "0";
+    modal.style.marginRight = "0";
   }
 
   window.onclick = function (event) {
     if (event.target == modal) {
       modal.classList.remove('modal--active');
       body.classList.remove('scroll-lock');
+      body.style.paddingRight = "0";
+      modal.style.marginRight = "0";
+
     }
   }
 }
